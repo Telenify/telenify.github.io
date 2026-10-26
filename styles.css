@@ -1,0 +1,203 @@
+/* Font stored in this repo (no calls to Google). Montserrat, SIL Open Font Licence. One file covers all weights. */
+@font-face {
+  font-family: Montserrat;
+  src: url("fonts/montserrat-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Brand colours (same as the logo) */
+:root {
+  --royal-blue: #0D2B5C;
+  --sky-blue: #38BDF8;
+  --bright-blue: #0D6EFD;
+  --light-sky: #CFE6FF;
+  --white: #F2F5F3;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--royal-blue);
+  color: var(--white);
+  font-family: Montserrat, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+}
+.wordmark {
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: var(--white);
+  text-decoration: none;
+}
+.wordmark span { color: var(--sky-blue); }
+/* Product line next to the company name, e.g. "FOOTBALL" */
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+}
+.wordmark small {
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--sky-blue);
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  border-radius: 999px;
+  padding: 4px 10px 4px 13px;
+  margin-left: 12px;
+}
+.top-bar-link {
+  color: var(--sky-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+.top-bar-link:hover { text-decoration: underline; }
+.wordmark, .top-bar-link { white-space: nowrap; }
+.top-bar-links { display: flex; gap: 24px; }
+
+/* Small phones: shrink the top bar so it stays on one line */
+@media (max-width: 480px) {
+  .top-bar { padding: 16px; }
+  .wordmark { font-size: 17px; letter-spacing: 2px; }
+  .wordmark small { font-size: 9px; letter-spacing: 2px; padding: 3px 8px 3px 10px; margin-left: 8px; }
+  .top-bar-link { font-size: 14px; }
+  .top-bar-links { gap: 14px; }
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 60px 16px 80px;
+}
+.hero-icon {
+  width: min(360px, 80%);
+  height: auto;
+}
+.hero h1 {
+  margin: 24px 0 0;
+  font-weight: 800;
+  font-size: clamp(40px, 9vw, 96px);
+  letter-spacing: 4px;
+  line-height: 1.1;
+}
+.hero-subtitle {
+  margin: 12px 0 0;
+  color: var(--sky-blue);
+  font-weight: 600;
+  font-size: clamp(14px, 2.5vw, 20px);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+/* Why we exist */
+.mission {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 80px 16px;
+  text-align: center;
+}
+.mission h1 {
+  margin: 0 0 16px;
+  font-weight: 800;
+  font-size: clamp(26px, 4.5vw, 40px);
+  line-height: 1.2;
+}
+.mission h1 span { display: block; color: var(--sky-blue); }
+.mission p {
+  margin: 0;
+  color: var(--light-sky);
+  font-size: clamp(16px, 2.2vw, 19px);
+}
+
+/* What we do */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px 80px;
+}
+.service {
+  border-top: 3px solid var(--sky-blue);
+  padding-top: 20px;
+}
+.service h2 {
+  margin: 0 0 8px;
+  font-weight: 800;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.service p {
+  margin: 0;
+  color: var(--light-sky);
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+  background: var(--light-sky);
+  color: var(--royal-blue);
+  padding: 64px 16px;
+}
+.contact h2 {
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(28px, 5vw, 44px);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.contact p { margin: 8px 0 16px; }
+.contact-email {
+  font-weight: 800;
+  font-size: clamp(18px, 4vw, 28px);
+  color: var(--bright-blue);
+  text-decoration: none;
+  word-break: break-all;
+}
+.contact-email:hover { text-decoration: underline; }
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 24px 16px;
+  font-size: 13px;
+  color: var(--light-sky);
+}
+.footer a { color: var(--light-sky); }
+
+/* Privacy and Terms pages */
+.legal {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+.legal h1 {
+  font-weight: 800;
+  font-size: clamp(28px, 5vw, 40px);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 4px;
+}
+.legal h2 {
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--sky-blue);
+  margin: 32px 0 8px;
+}
+.legal p, .legal li { color: var(--light-sky); }
+.legal a { color: var(--sky-blue); }
+.legal .updated { font-size: 13px; margin: 0 0 24px; }
