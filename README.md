@@ -12,6 +12,7 @@ Plain HTML + CSS, no build step. Font stored in `fonts/` (no Google calls), no c
 | `terms.html` | Website Terms |
 | `styles.css` | All styles and brand colours |
 | `CNAME` | Custom domain for GitHub Pages |
+| `favicon.ico`, `apple-touch-icon.png`, `images/favicon-*.png` | Square logo for browser tabs and Google results |
 
 Rules: no personal information, no match footage, keep the "how" (leagues, prices, methods) private.
-Preview locally: open `index.html` in a browser.
+Preview locally: run `python3 -m http.server` in this folder, then open http://localhost:8000 (links use `/`, so opening the file directly will not work).
