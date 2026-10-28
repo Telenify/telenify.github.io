@@ -176,6 +176,11 @@ body {
   color: var(--light-sky);
 }
 .footer a { color: var(--light-sky); }
+/* Social media links */
+.footer .social { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 24px; margin: 0 0 12px; }
+.footer .social a { color: var(--sky-blue); display: inline-flex; }
+.footer .social svg { width: 22px; height: 22px; fill: currentColor; }
+.footer .social a:hover { color: var(--white); }
 
 /* Privacy and Terms pages */
 .legal {
